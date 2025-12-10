@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/ptgvn.site
+    - /bin/rsync -a --delete ./ $DEPLOYPATH \
+        --exclude '.git' \
+        --exclude '.cpanel.yml'
